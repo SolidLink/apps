@@ -86,8 +86,9 @@ module.controller('ToDoCtrl', function ($scope, todoStorage) {
    };
 });
 module.controller('BasketballCtrl', function ($scope, moment, basketballStorage, $interval) {
-   var basketball = $scope.basketball = basketballStorage.get();
-   var counter;
+   var basketball = $scope.basketball = basketballStorage.get(),
+    counter;
+
    $scope.error = {};
    function save() {
      basketball.variables = {
@@ -112,12 +113,13 @@ module.controller('BasketballCtrl', function ($scope, moment, basketballStorage,
     }
    };
    $scope.stop = function () {
-    save();
     $interval.cancel(counter);
     counter = undefined;
    };
    $scope.restart = function () {
     basketball.startTime = basketball.variables.startTime;
-    console.log(basketball.variables)
+   };
+   $scope.score = function (team, point) {
+      basketball[team + 'Score'] = basketball[team + 'Score'] + point;
    };
 });

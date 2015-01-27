@@ -1,5 +1,11 @@
 @import "bootstrap-theme.css";
 @import "bootstrap.css";
+html, body, #top {
+   height: 100%;
+}
+#top {
+   position: relative;
+}
 .header {
    margin-bottom: 40px;
 }
@@ -204,6 +210,51 @@ label[for='toggle-all'] {
    background: rgba(0, 0, 0, 0.15);
    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.3);
 }
-
+#basketball {
+   text-align: center;
+   font-size: 45px;
+}
+#basketball label {
+   display: block;
+}
+#basketball input {
+   display: block;
+   margin: 0px auto;
+   width: 100%;
+   box-sizing: border-box;
+   text-align: center;
+   border: none;
+   cursor: pointer;
+}
+#basketball .row {
+   margin-bottom: 50px;
+}
+#menu {
+   position: absolute;
+   width: 100%;
+   bottom: 35px;
+}
+#time {
+   font-size: 150px;
+   color: #000;
+}
+#basketball .title {
+   background-color: #000;
+   color: #fff;
+}
+#basketball .home-title {
+   background-color: red;
+   color: #fff;
+}
+#basketball .away-title {
+   background-color: blue;
+   color: #fff;
+}
+#basketball .score {
+   font-size: 100px;
+}
+.bold {
+   font-weight: bold;
+}
 .hidden {
    display: none;
